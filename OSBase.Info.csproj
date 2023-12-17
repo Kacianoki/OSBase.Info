@@ -15,8 +15,10 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Description>The basis for writing the OS in Eternal Beta</Description>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.1.0.1</AssemblyVersion>
-    <FileVersion>1.1.0.1</FileVersion>
+    <AssemblyVersion>1.2.0.1</AssemblyVersion>
+    <FileVersion>1.2.0.1</FileVersion>
+    <Version>1.2.0</Version>
+    <Copyright>Kacianoki</Copyright>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
