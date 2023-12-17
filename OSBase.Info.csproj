@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -10,6 +10,13 @@
     <Company>Kacianoki</Company>
     <PackageIcon>EBLogo.png</PackageIcon>
     <PackageTags>Eternal Beta</PackageTags>
+    <RepositoryUrl>https://github.com/Kacianoki/OSBase.Info</RepositoryUrl>
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Description>The basis for writing the OS in Eternal Beta</Description>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyVersion>1.1.0.1</AssemblyVersion>
+    <FileVersion>1.1.0.1</FileVersion>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
@@ -21,16 +28,13 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+	<None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EternalBeta\EternalBeta.Components\EternalBeta.Components.csproj" />
+    <PackageReference Include="EternalBeta.Components" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\..\libs\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 
 </Project>
